@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/style2.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+  <body>
+
+    <header>
+      <a href="{{ url_for('home')}}">
+        <img class="hoveringImage" ; src = "../static/images/home.png"; width=43px ; alt="Home"; align="left";>	</a>
+      <nav style ="font-size:18px; ">
+          <a style="color:white" href="{{ url_for('logout') }}" class="hoveringText"> Logout </a>&nbsp;
+      </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

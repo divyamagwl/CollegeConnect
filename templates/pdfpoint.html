@@ -1,0 +1,32 @@
+{% extends "layout2.html" %}
+
+{% block title %} College Connect {% endblock %}
+
+{% block content %}
+
+<main>
+
+    <h1 align="center" style="color: aqua;font-size: 60px; font-family: 'Ibarra Real Nova',sans-serif;"> PDFPOINT </h2>
+
+    <div class="container w3-center">
+        <div>
+            {% for somepdf in pdf %}
+            <div class="container">
+                <object data="../static/uploaded_pdf/{{somepdf}}" type="application/pdf" width="60%" height="100%">
+                <a href="../static/uploaded_pdf/{{somepdf}}" style="color: aqua; font-size: 30px;">Your Browser does not support this format. You can download this file.</a></object>        
+            </div>
+            <br/><br/>
+            {% endfor %}        
+        </div>
+    </div>
+
+    <a href="{{ url_for('upload_pdf') }}" style="color: white ;">
+        <button type = "button" style="font-size:25px" class="btn-block btn-info w3-round-xlarge shadow">
+        Share PDF posts</button></a>                    
+    <br/><br/>
+
+</main>
+
+
+
+{% endblock %}

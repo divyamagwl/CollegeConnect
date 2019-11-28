@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:700&display=swap');
+
+body{
+	background-image:url('images/back.jpeg');
+	background-size:102% 102%;
+  font-family:'PT sans',sans-serif;
+}
+
+div.box
+{
+  background-color: rgba(177, 220, 255, 0.897);
+  padding:20px;
+  width: 35%;
+  border-radius: 1%;
+}
+
+input[type=submit] {
+  width: 60%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}

@@ -1,0 +1,63 @@
+{% extends "layout2.html" %}
+
+{% block title %} College Connect {% endblock %}
+
+{% block content %}
+
+
+<div class="container">
+
+    <div class="w3-center">
+        <h1 style="font-size: 50px; color: aqua; font-family:'Ibarra Real Nova',sans-serif;">Welcome to Homepage of College Connect!!</h1>
+    </div><br/><br/>
+    
+
+    <div class="row w3-center" style="font-family:'Work sans',sans-serif;">
+        <div class="col">
+            <a href = "{{ url_for ('status')}}">
+            <h4 style="color: white;" class="hoveringText">View Posts shared by others</h4> </a> <br/>
+            <a href = "{{ url_for ('status')}}">
+            <img src = "../static/images/1.jpeg" width=270px height=180px alt="" class="polaroid hoveringImage"> </a>
+        </div>  
+
+        <div class="col">
+            <a href = "{{ url_for ('images')}}">
+            <h4 style="color: white;" class="hoveringText">View Images shared by others</h4> </a> <br/>
+            <a href = "{{ url_for ('images')}}">
+            <img src = "../static/images/2.webp" width=270px height=180px alt="" class="polaroid hoveringImage"> </a>
+        </div>  
+
+        <div class="col">
+            <a href = "{{ url_for ('PDFs')}}">
+            <h4 style="color: white;" class="hoveringText">View PDFs shared by others</h4> </a> <br/>
+            <a href = "{{ url_for ('PDFs')}}">
+            <img src = "../static/images/3.jpg" width=270px height=180px alt="" class="polaroid hoveringImage"> </a>
+        </div>  
+        
+    </div>
+<br/><br/><br/>
+
+    <div class="w3-center row">
+        <div class="col" style="padding: 5px">
+            <a href="{{ url_for('upload_status') }}" style="color: white ;">
+                <button type = "button" style="font-size:25px" class="btn-block btn-info w3-round-xlarge shadow">
+                Share Status posts</button></a>
+        </div>
+        <div class="col" style="padding: 5px">
+                <a href="{{ url_for('upload_image') }}" style="color: white ;">
+                <button type = "button" style="font-size:25px" class="btn-block btn-info w3-round-xlarge shadow">
+                Share Images posts</button></a>            
+        </div>    
+        <div class="col" style="padding: 5px">
+            <a href="{{ url_for('upload_pdf') }}" style="color: white ;">
+                <button type = "button" style="font-size:25px" class="btn-block btn-info w3-round-xlarge shadow">
+                Share PDF posts</button></a>                    
+        </div>
+    </div>
+    
+<br/>
+
+
+</div>
+
+{% endblock %}

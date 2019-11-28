@@ -1,0 +1,36 @@
+{% extends "layout2.html" %}
+
+{% block title %} College Connect {% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories="true") %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="container text-{{ category }}" style="font-size:20px; margin: 10px; padding: 2px;" >
+        {{ message}}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+ 
+
+<main>
+    <br/>
+    <div class = "container w3-center box">
+
+      <form action="" method="POST" enctype="multipart/form-data" style="color: aqua;">
+
+        <h2 style="color: white;"> Share Images</h2><br/>
+
+        <label style="font-size: 18px;">Caption-</label><br/>
+        <textarea rows = "3" cols = "40" name ="caption"></textarea><br/><br/>
+
+          Select a file: <input type="file" name="inputFile"> <br><br>
+          <button class="btn w3-round-xlarge shadow btn-success" type="submit"> Submit</button>
+      </form>
+
+    </div>
+</main>
+
+{% endblock %}

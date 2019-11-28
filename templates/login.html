@@ -1,0 +1,44 @@
+{% extends "forms.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories="true") %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="container text-{{ category }}" style="font-size:20px; margin: 4px; padding: 0px;" >
+        {{ message}}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+    
+<br/><br/>
+<h1 style="font-size: 72px; color: aqua; margin: 5px;" align="center">LOGIN</h1><br/>
+
+<div class="container w3-center box">
+
+<form action="" method="POST" >
+       
+    <div style="margin:20px 0px 20px 0px">
+      {{ form.username.label(style="font-size:20px") }}<br>
+      {{ form.username(style="font-size:13px; width:80%; padding:10px", placeholder="Enter your user ID here..") }}<br>
+    </div>
+
+    <div style="margin:20px 0px 30px 0px">
+      {{ form.password.label(style="font-size:20px") }}<br>
+      {{ form.password(style="font-size:13px; width:80%; padding:10px", placeholder="Enter your password here..") }}<br/>
+    </div>
+
+    {{ form.submit }}     
+
+</form>
+
+<p style="color: black;">Don't have an account yet..
+<a style="color: rgb(41, 10, 10);" href="{{ url_for('register') }}">Click here </a></p>
+
+</div>
+<br/><br/>
+{% endblock %}
+

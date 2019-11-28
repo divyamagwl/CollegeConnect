@@ -1,0 +1,67 @@
+{% extends "forms.html" %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+
+<div class="container-fluid text-warning" style="font-size:20px; margin: 4px; padding: 0px;" >
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      {{ message}}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+</div>
+
+<br/><br/>
+<h1 style="font-size: 72px; color: aqua; margin: 5px;" align="center">REGISTER</h1><br/>
+
+<div class="container w3-center box">
+
+<form action="" method="POST" >
+
+  {{ form.hidden_tag() }}
+
+  <div style="margin:20px 0px 20px 0px">
+    {{ form.username.label(style="font-size:20px") }}<br>
+    {{ form.username(style="font-size:13px; width:80%; padding:10px", placeholder="Enter your user ID here..") }}<br>
+
+    {% if form.username.errors %}
+      {% for message in form.username.errors %}
+        <div style="font-size: 15px;">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+
+  </div>
+
+  <div style="margin:20px 0px 20px 0px">
+    {{ form.password.label(style="font-size:20px") }}<br>
+    {{ form.password(style="font-size:13px; width:80%; padding:10px", placeholder="Enter your password here..") }}<br/>
+  </div>
+
+  <div style="margin:20px 0px 30px 0px">
+      {{ form.confirm_password.label(style="font-size:20px") }}<br>
+      {{ form.confirm_password(style="font-size:13px; width:80%; padding:10px", placeholder="Retype password..") }}<br/>
+      
+      {% if form.confirm_password.errors %}
+      {% for message in form.confirm_password.errors %}
+      <div style="font-size: 15px;">{{ message }}</div>
+      {% endfor %}
+      {% endif %}
+
+  </div>
+  
+
+  {{ form.submit }}     
+
+</form>
+
+<p style="color: black;">Already have an account..
+  <a style="color: rgb(41, 10, 10);" href="{{ url_for('login') }}">Click here </a></p>
+
+</div>
+<br/>
+
+{% endblock %}
+

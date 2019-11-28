@@ -1,0 +1,32 @@
+{% extends "layout2.html" %}
+
+{% block title %} College Connect {% endblock %}
+
+{% block content %}
+
+<main>
+    <br/>
+    <div class = "container w3-center box">
+    <form action="" method="POST">
+        
+        <h2 style="color: white;"> Share Status</h2><br/>
+        
+        <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+            {{ form.aimsTowards.label(style="color:aqua") }}<br>
+            {{ form.aimsTowards}}</div><br>
+        <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+            {{ form.description.label(style="color:aqua") }}<br>
+            {{ form.description }}</div><br>
+        <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+            {{ form.author.label(style="color:aqua") }}<br>
+            {{ form.author }}</div><br><br>
+                     
+    {{ form.submit(class="btn-success") }}
+    </form>
+
+    </div>    
+
+</main>
+
+
+{% endblock %}

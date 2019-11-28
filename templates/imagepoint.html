@@ -1,0 +1,36 @@
+{% extends "layout2.html" %}
+
+{% block title %} College Connect {% endblock %}
+
+{% block content %}
+
+<main>
+
+    <h1 align="center" style="color: aqua;font-size: 60px; font-family: 'Ibarra Real Nova',sans-serif;"> IMAGEPOINT </h2>
+
+    <div class="container w3-center">
+        {% for someimage in image %}
+        {% for someposts in posts %}
+        {% if someposts.creationTime == someimage %}
+        <div>
+            <div class="container TextBox" style="word-wrap: break-word"><br/>
+            <h3>{{someposts.caption}}</h3> <br/>
+            </div>
+            <div class="container">
+            <img src="../static/uploaded_images/{{someimage}}"; width="50%"; height="50%" class="polaroid1"></div>
+        </div>
+        <br/><br/>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </div>
+
+    <a href="{{ url_for('upload_image') }}" style="color: white ;">
+        <button type = "button" style="font-size:25px" class="btn-block btn-info w3-round-xlarge shadow">
+        Share Images posts</button></a>            
+    <br/><br/>
+
+</main>
+
+
+{% endblock %}

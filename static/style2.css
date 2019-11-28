@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:700&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image:url("images/bg2.jpg");
+    background-size: 100%;
+}
+
+header{
+    background-image:url("images/bg2.jpg");
+    padding:10px;
+    text-align:right;
+    background-size: 100%;
+}
+
+nav{
+    padding:10px;
+}
+
+main{
+	margin:5px;
+}
+
+
+.TextBox{
+    margin: 30px;
+    background-color: rgb(232, 243, 243);
+    border: 0.5px solid black;
+    opacity: 0.9;
+	transition: box-shadow 0.4s;
+}
+
+.TextBox:hover{
+	box-shadow: 0px 0px 5px 10px rgba(33,33,33,.2); 
+}
+
+img.polaroid {
+    padding: 5px 5px 5px 5px;
+    border: 1px solid aqua;
+    background-color: rgba(0, 255, 255, 0.774);
+    border-radius: 15%;
+}
+
+img.polaroid1 {
+    padding: 2px 2px 2px 2px;
+    border: 1px solid rgb(1, 126, 126);
+    background-color: rgba(0, 255, 255, 0.774);
+    border-radius: 0%;
+}
+
+div.box{
+  background-color: rgba(255, 255, 255, 0.3);
+  padding:20px 5px 20px 5px;
+  width: 40%;
+  border-radius: 10%;
+}
+
+img.hoveringImage:hover{
+	opacity:0.7;
+}
+
+.hoveringText:hover{
+    opacity: 0.5;
+}
+
+input[type=submit] {
+    width: 30%;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+.btn{
+    border:none;
+    background-color:firebrick;
+    padding:20px 3px 20px 2px;
+    font-size: 20px;
+    display: inline-block;
+}
+  
+  

@@ -1,0 +1,29 @@
+{% extends "layout2.html" %}
+
+{% block title %} College Connect {% endblock %}
+
+{% block content %}
+
+<main>
+<div class="container">
+
+    <h1 align="center" style="color: aqua;font-size: 60px; font-family: 'Ibarra Real Nova',sans-serif;"> BLOGPOINT </h2>
+
+    <div>
+    {% for something in posts %}
+        <div class="container TextBox" style="word-wrap: break-word"><br/>        
+        <h3>To: {{something.aimsTowards}} </h3>
+        <h5>#CollegeConnect {{something.id}}</h5>
+        <h4>{{something.description}} </h4>
+        <h5>By- {{something.author}} on {{something.creationTime}}</h5> <br/>    
+        </div>
+    {% endfor %}
+    </div>
+
+    <a href="{{ url_for('upload_status') }}" style="color: white ;">
+        <button type = "button" style="font-size:25px" class="btn-block btn-info w3-round-xlarge shadow">
+        Share Status posts</button></a><br/><br/>
+</div>
+</main>
+
+{% endblock %}

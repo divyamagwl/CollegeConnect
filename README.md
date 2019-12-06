@@ -1,16 +1,14 @@
-# CollegeConnect
+<h1 align="center">College Connect</h1>
 
-![Index](/static/images/github1.jpg)
+![Index](/static/images/github2.jpg)
 
-We are on a mission to make people more open and share their knowledge with everyone.
+![Home](/static/images/github1.jpg)
 
 ### Follow the commands to run the website
 
 	. venv/bin/activate
 	pip install -r requirements.txt
 	python app.py
-
-![Home](/static/images/github2.jpg)
 
 ## 🤝 Contributing
 

@@ -34,7 +34,7 @@ mathparse==0.1.2
 more-itertools==5.0.0
 murmurhash==1.0.2
 nltk==3.4.5
-numpy==1.16.5
+numpy==1.22.0
 packaging==19.2
 pathlib==1.0.1
 pathlib2==2.3.5
